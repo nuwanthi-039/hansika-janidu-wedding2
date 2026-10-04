@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#cfe9fb">
+
+    <title>Hansika & Janidu | Wedding Invitation</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+Sinhala:wght@400;500;600;700&family=Yaldevi:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="css/style.css?v=2">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SPLASH SCREEN
+===================================================== -->
+
+<section id="splashScreen">
+
+    <!-- Wedding Photo -->
+
+    <img
+        id="splashPhoto"
+        src="images/gallery10.jpeg"
+        alt="Hansika and Janidu">
+
+
+    <!-- Dark Overlay -->
+
+    <div class="photoOverlay"></div>
+
+
+    <!-- Jasmine Petals -->
+
+    <div id="petals"></div>
+
+
+    <!-- Splash Content -->
+
+    <div class="splashContent">
+
+        <p class="smallText">
+            Together With Our Families
+        </p>
+
+
+        <h1 class="coupleNames">
+
+            Hansika
+
+            <span>❤️</span>
+
+            Janidu
+
+        </h1>
+
+
+        <p class="invitationText">
+
+            We invite you to celebrate
+            our special day with us.
+
+        </p>
+
+
+        <!-- LANGUAGE BUTTONS -->
+
+        <div class="languageButtons">
+
+            <button
+                type="button"
+                class="languageBtn"
+                id="sinhalaBtn">
+
+                සිංහල
+
+            </button>
+
+
+            <button
+                type="button"
+                class="languageBtn"
+                id="englishBtn">
+
+                English
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN WEBSITE
+===================================================== -->
+
+<main id="mainContent">
+
+
+    <!-- MUSIC -->
+
+    <audio
+        id="weddingMusic"
+        loop>
+
+        <source
+            src="music/layama-piruna-kanchana-anuradhi-dinesh-gamage.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+
+    <!-- MUSIC BUTTON -->
+
+    <button
+        id="musicButton"
+        type="button"
+        aria-label="Toggle music">
+
+        🎵
+
+    </button>
+
+   <button id="backToSplash" class="backButton" onclick="backToSplashScreen()">
+    ← Back
+</button>
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section class="hero">
+
+        <div class="goldLine"></div>
+
+        <p id="heroSmall"></p>
+
+        <h1 id="heroTitle"></h1>
+
+        <div class="heroHeart">❤</div>
+
+        <p id="heroDescription"></p>
+
+        <p id="heroDate" class="heroDate"></p>
+
+        <div class="goldLine"></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         COUNTDOWN
+    ================================================== -->
+
+    <section class="countdownSection">
+
+        <h2 id="countdownTitle">
+            Counting Down To Our Special Day
+        </h2>
+
+
+        <div class="countdown">
+
+            <div class="timeBox">
+
+                <span id="days">
+                    00
+                </span>
+
+                <small id="daysText">
+                    Days
+                </small>
+
+            </div>
+
+
+            <div class="timeBox">
+
+                <span id="hours">
+                    00
+                </span>
+
+                <small id="hoursText">
+                    Hours
+                </small>
+
+            </div>
+
+
+            <div class="timeBox">
+
+                <span id="minutes">
+                    00
+                </span>
+
+                <small id="minutesText">
+                    Minutes
+                </small>
+
+            </div>
+
+
+            <div class="timeBox">
+
+                <span id="seconds">
+                    00
+                </span>
+
+                <small id="secondsText">
+                    Seconds
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <button
+            id="addToCalendarBtn"
+            class="goldButton calendarBtn"
+            type="button">
+
+            📅 Add To Google Calendar
+
+        </button>
+
+    </section>
+
+
+
+    <!-- =================================================
+         OUR STORY
+    ================================================== -->
+
+    <section class="section">
+
+        <div class="sectionTitle">
+
+            <span>✦</span>
+
+            <h2 id="storyTitle">
+                Our Story
+            </h2>
+
+            <span>✦</span>
+
+        </div>
+
+
+        <p
+            id="storyText"
+            class="centerText">
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         GALLERY
+    ================================================== -->
+
+    <section class="gallerySection">
+
+        <div class="sectionTitle">
+
+            <span>✦</span>
+
+            <h2 id="galleryTitle">
+                Our Beautiful Moments
+            </h2>
+
+            <span>✦</span>
+
+        </div>
+
+
+        <div class="gallery">
+
+            <div class="galleryTrack">
+
+                <img
+                    src="images/gallery1.jpeg"
+                    alt="Wedding memory 1">
+
+                <img
+                    src="images/gallery3.jpeg"
+                    alt="Wedding memory 3">
+
+                <img
+                    src="images/gallery4.jpeg"
+                    alt="Wedding memory 4">
+
+                <img
+                    src="images/gallery5.jpeg"
+                    alt="Wedding memory 5">
+
+                <img
+                    src="images/gallery6.jpeg"
+                    alt="Wedding memory 6">
+
+                <img
+                    src="images/gallery8.jpeg"
+                    alt="Wedding memory 8">
+
+                <img
+                    src="images/gallery9.jpeg"
+                    alt="Wedding memory 9">
+
+                <img
+                    src="images/gallery10.jpeg"
+                    alt="Wedding memory 10">
+
+                <img
+                    src="images/gallery11.jpeg"
+                    alt="Wedding memory 11">
+
+
+                <!-- Duplicate set for a seamless loop -->
+
+                <img
+                    src="images/gallery1.jpeg"
+                    alt="Wedding memory 1"
+                    aria-hidden="true">
+
+                <img
+                    src="images/gallery3.jpeg"
+                    alt="Wedding memory 3"
+                    aria-hidden="true">
+
+                <img
+                    src="images/gallery4.jpeg"
+                    alt="Wedding memory 4"
+                    aria-hidden="true">
+
+                <img
+                    src="images/gallery5.jpeg"
+                    alt="Wedding memory 5"
+                    aria-hidden="true">
+
+                <img
+                    src="images/gallery6.jpeg"
+                    alt="Wedding memory 6"
+                    aria-hidden="true">
+
+                <img
+                    src="images/gallery8.jpeg"
+                    alt="Wedding memory 8"
+                    aria-hidden="true">
+
+                <img
+                    src="images/gallery9.jpeg"
+                    alt="Wedding memory 9"
+                    aria-hidden="true">
+
+                <img
+                    src="images/gallery10.jpeg"
+                    alt="Wedding memory 10"
+                    aria-hidden="true">
+
+                <img
+                    src="images/gallery11.jpeg"
+                    alt="Wedding memory 11"
+                    aria-hidden="true">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PORUWA
+    ================================================== -->
+
+    <section class="poruwaSection">
+
+        <div class="sectionTitle">
+
+            <span>✦</span>
+
+            <h2 id="poruwaTitle">
+                Poruwa Ceremony
+            </h2>
+
+            <span>✦</span>
+
+        </div>
+
+
+
+
+        <p
+            id="poruwaText"
+            class="centerText">
+        </p>
+
+
+        <div class="eventDetails">
+
+
+            <div>
+
+                <span>📅</span>
+
+                <h3 id="poruwaDateTitle">
+                    Date
+                </h3>
+
+                <p id="poruwaDate"></p>
+
+            </div>
+
+
+            <div>
+
+                <span>🕘</span>
+
+                <h3 id="poruwaTimeTitle">
+                    Time
+                </h3>
+
+                <p id="poruwaTime"></p>
+
+            </div>
+
+
+            <div>
+
+                <span>📍</span>
+
+                <h3 id="venueTitle">
+                    Venue
+                </h3>
+
+                <p id="venue"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         LOCATION
+    ================================================== -->
+
+    <section class="locationSection">
+
+        <div class="sectionTitle">
+
+            <span>✦</span>
+
+            <h2 id="locationTitle">
+                Find Us
+            </h2>
+
+            <span>✦</span>
+
+        </div>
+
+
+        <a
+            class="hotelPhotoLink"
+            href="https://www.google.com/maps/place/Hotel+Grand+Guardian+-+Ratnapura/@6.7430006,80.3793568,17z/data=!3m1!4b1!4m6!3m5!1s0x3ae3bc1ce53227ff:0xe79d72258a3c1414!8m2!3d6.7430006!4d80.3793568!16s%2Fg%2F11c6t_4fj0"
+            target="_blank"
+            rel="noopener">
+
+            <img
+                class="hotelPhoto"
+                src="images/hotel-photo.jpeg"
+                alt="Hotel Grand Guardian, Kuruwita">
+
+        </a>
+
+
+        <div class="mapContainer">
+
+            <iframe
+                src="https://www.google.com/maps?q=Hotel+Grand+Guardian+Ratnapura&z=17&output=embed"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         RSVP
+    ================================================== -->
+
+    <section class="rsvpSection">
+
+        <div class="sectionTitle">
+
+            <span>✦</span>
+
+            <h2 id="rsvpTitle">
+                RSVP
+            </h2>
+
+            <span>✦</span>
+
+        </div>
+
+
+        <p
+            id="rsvpText"
+            class="centerText">
+        </p>
+
+
+        <button
+            id="rsvpButton"
+            class="goldButton"
+            type="button">
+
+            Confirm Attendance
+
+        </button>
+
+
+        <div class="contactNumbers">
+
+            <a href="tel:+94718839973" class="contactItem">
+
+                <span class="contactIcon">📞</span>
+
+                <span>Janidu — 071 883 9973</span>
+
+            </a>
+
+
+            <a href="tel:+94761242397" class="contactItem">
+
+                <span class="contactIcon">📞</span>
+
+                <span>Hansika — 076 124 2397</span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+    <footer>
+
+        <h2>
+            Hansika ❤️ Janidu
+        </h2>
+
+        <p id="footerText"></p>
+
+    </footer>
+
+
+</main>
+
+
+<!-- JAVASCRIPT -->
+<script src="js/app.js?v=2"></script>
+
+</body>
+
+</html>
