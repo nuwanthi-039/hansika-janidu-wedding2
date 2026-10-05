@@ -11,6 +11,7 @@
     --cream:     #f5f0e6;
     --purple:    #b48be0;
     --white:     #ffffff;
+    --pink-dark: #c2185b;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -318,12 +319,12 @@ body {
 ===================================================== */
 .countdownSection {
     background: var(--pink);
-    color: var(--navy);
+    color: var(--pink-dark);
 }
 
 .countdownSection h2 {
     font-size: 40px;
-    color: var(--navy);
+    color: var(--pink-dark);
     margin-bottom: 35px;
 }
 
@@ -342,20 +343,20 @@ body {
 .timeBox {
     width: 130px;
     padding: 20px;
-    border: 1px solid var(--navy);
+    border: 1px solid var(--pink-dark);
     border-radius: 15px;
-    background: rgba(255, 255, 255, .35);
+    background: rgba(255, 255, 255, .45);
 }
 
 .timeBox span {
     display: block;
     font-size: 45px;
-    color: var(--navy);
+    color: var(--pink-dark);
 }
 
 .timeBox small {
     font-size: 18px;
-    color: var(--navy);
+    color: var(--pink-dark);
 }
 
 
