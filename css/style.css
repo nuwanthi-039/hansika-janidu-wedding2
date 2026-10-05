@@ -1,5 +1,5 @@
 /* =====================================================
-   COLOR TOKENS  (change these to tune the palette)
+   COLOR TOKENS
 ===================================================== */
 :root {
     --gold:      #e6c35c;
@@ -12,16 +12,46 @@
     --purple:    #b48be0;
     --white:     #ffffff;
     --pink-dark: #c2185b;
+    --blue-dark: #1a3a6e;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+/* =====================================================
+   RESET
+===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background: var(--white);
     color: var(--navy);
-    font-family: "Cormorant Garamond", "Noto Sans Sinhala", serif;
+
+    /* Main elegant font */
+    font-family:
+        "Cormorant Garamond",
+        "Noto Serif Sinhala",
+        serif;
+}
+
+
+/* =====================================================
+   HEADINGS
+===================================================== */
+
+h1,
+h2,
+h3 {
+    font-family:
+        "Playfair Display",
+        "Noto Serif Sinhala",
+        serif;
 }
 
 
@@ -33,31 +63,53 @@ body {
     width: 100%;
     position: relative;
     overflow: hidden;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     background: var(--navy);
 }
 
 #splashPhoto {
     position: absolute;
+
     width: 100%;
     height: 100%;
+
     object-fit: cover;
     object-position: center;
+
     z-index: 1;
-    animation: splashZoom 10s ease-in-out infinite alternate;
+
+    animation:
+        splashZoom
+        10s
+        ease-in-out
+        infinite
+        alternate;
 }
 
 @keyframes splashZoom {
-    0%   { transform: scale(1); }
-    100% { transform: scale(1.08); }
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.08);
+    }
 }
 
 .photoOverlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.65));
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, .35),
+            rgba(0, 0, 0, .65)
+        );
+
     z-index: 2;
 }
 
@@ -68,56 +120,141 @@ body {
 .splashContent {
     position: relative;
     z-index: 10;
+
     text-align: center;
     color: white;
+
     padding: 20px;
     max-width: 900px;
-    animation: contentFade 2s ease;
+
+    animation:
+        contentFade
+        2s
+        ease;
 }
 
 @keyframes contentFade {
-    from { opacity: 0; transform: translateY(30px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .smallText {
+    font-family:
+        "Playfair Display",
+        "Noto Serif Sinhala",
+        serif;
+
     font-size: 20px;
     letter-spacing: 4px;
     margin-bottom: 20px;
 }
 
+
+/* =====================================================
+   COUPLE NAMES
+   Elegant handwritten wedding font
+===================================================== */
 .coupleNames {
-    font-size: clamp(50px, 9vw, 110px);
-    font-weight: 500;
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        clamp(55px, 10vw, 120px);
+
+    font-weight: 400;
+
     line-height: 1.1;
-    background: linear-gradient(90deg, #c69b2c, #fff3a6, #d4af37, #fff3a6, #c69b2c);
+
+    background:
+        linear-gradient(
+            90deg,
+            #c69b2c,
+            #fff3a6,
+            #d4af37,
+            #fff3a6,
+            #c69b2c
+        );
+
     background-size: 300%;
+
     -webkit-background-clip: text;
+    background-clip: text;
+
     -webkit-text-fill-color: transparent;
-    animation: goldShimmer 5s infinite;
+
+    animation:
+        goldShimmer
+        5s
+        infinite;
 }
 
 .coupleNames span {
     -webkit-text-fill-color: #d4af37;
+
     display: inline-block;
-    animation: heartBeat 2s infinite;
+
+    animation:
+        heartBeat
+        2s
+        infinite;
 }
 
+
+/* =====================================================
+   HEART
+===================================================== */
 @keyframes heartBeat {
-    0%, 100% { transform: scale(1); }
-    50%      { transform: scale(1.2); }
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
 }
 
+
+/* =====================================================
+   GOLD SHIMMER
+===================================================== */
 @keyframes goldShimmer {
-    0%   { background-position: 0%; }
-    100% { background-position: 300%; }
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 300%;
+    }
 }
 
+
+/* =====================================================
+   INVITATION TEXT
+===================================================== */
 .invitationText {
+    font-family:
+        "Cormorant Garamond",
+        "Noto Serif Sinhala",
+        serif;
+
     font-size: 22px;
+
     margin: 25px auto;
+
     max-width: 600px;
+
     line-height: 1.6;
+
+    font-weight: 500;
 }
 
 
@@ -126,38 +263,63 @@ body {
 ===================================================== */
 .languageButtons {
     margin-top: 35px;
+
     display: flex;
+
     justify-content: center;
     align-items: center;
+
     flex-wrap: wrap;
+
     gap: 10px;
 }
 
 .languageBtn {
     position: relative;
     z-index: 50;
+
     padding: 14px 35px;
     margin: 5px;
+
     border: 1px solid var(--gold-deep);
+
     border-radius: 50px;
-    background: rgba(212, 175, 55, .18);
+
+    background:
+        rgba(212, 175, 55, .18);
+
     color: white;
-    font-family: "Cormorant Garamond", "Noto Sans Sinhala", serif;
+
+    font-family:
+        "Cormorant Garamond",
+        "Noto Serif Sinhala",
+        serif;
+
     font-size: 18px;
+
     cursor: pointer;
+
     transition: .4s;
+
     pointer-events: auto;
 }
 
 .languageBtn:hover {
     background: var(--gold-deep);
+
     color: white;
+
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(212, 175, 55, .35);
+
+    box-shadow:
+        0 8px 25px
+        rgba(212, 175, 55, .35);
 }
 
 .languageBtn:active {
-    transform: translateY(-1px) scale(.98);
+    transform:
+        translateY(-1px)
+        scale(.98);
 }
 
 
@@ -166,28 +328,59 @@ body {
 ===================================================== */
 #petals {
     position: absolute;
+
     inset: 0;
+
     z-index: 5;
+
     pointer-events: none;
+
     overflow: hidden;
 }
 
 .petal {
     position: absolute;
+
     top: -40px;
+
     width: 25px;
     height: 25px;
-    background-image: url("../images/jasmine.png");
+
+    background-image:
+        url("../images/jasmine.png");
+
     background-size: contain;
+
     background-repeat: no-repeat;
+
     pointer-events: none;
-    animation: falling linear infinite;
+
+    animation:
+        falling
+        linear
+        infinite;
 }
 
 @keyframes falling {
-    0%   { transform: translateY(-50px) rotate(0deg); opacity: 0; }
-    10%  { opacity: 1; }
-    100% { transform: translateY(110vh) rotate(360deg); opacity: .2; }
+    0% {
+        transform:
+            translateY(-50px)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
+        opacity: .2;
+    }
 }
 
 
@@ -196,83 +389,174 @@ body {
 ===================================================== */
 #mainContent {
     display: none;
+
     min-height: 100vh;
 }
 
 
 /* =====================================================
-   HERO  (white -> light pink -> light blue)
+   HERO
 ===================================================== */
 .hero {
     min-height: 70vh;
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
+
     text-align: center;
+
     padding: 40px 20px;
+
     position: relative;
-    background: linear-gradient(160deg, var(--white), var(--pink) 50%, var(--blue));
+
+    background:
+        linear-gradient(
+            160deg,
+            var(--white),
+            var(--pink) 50%,
+            var(--blue)
+        );
+
     overflow: hidden;
 }
 
 .hero::before {
     content: "";
+
     position: absolute;
+
     inset: 0;
-    background-image: url("../images/gallery4.jpeg");
+
+    background-image:
+        url("../images/gallery4.jpeg");
+
     background-size: cover;
+
     background-position: center;
+
     background-repeat: no-repeat;
+
     opacity: 0.25;
+
     z-index: 0;
 }
 
 .hero > * {
     position: relative;
+
     z-index: 1;
 }
 
+
+/* =====================================================
+   HERO TITLE
+===================================================== */
 .hero h1 {
-    font-size: clamp(45px, 8vw, 90px);
+    font-family:
+        "Playfair Display",
+        "Noto Serif Sinhala",
+        serif;
+
+    font-size:
+        clamp(45px, 8vw, 90px);
+
+    font-weight: 600;
+
     color: #b8860b;
+
     margin: 20px;
 }
 
-/* Applied only when the Sinhala language is active */
+
+/* =====================================================
+   SINHALA HERO TITLE
+===================================================== */
 .hero h1.sinhalaTitle {
-    font-family: "Yaldevi", "Noto Sans Sinhala", serif;
+    font-family:
+        "Noto Serif Sinhala",
+        serif;
+
     font-weight: 700;
 }
 
+
+/* =====================================================
+   HERO DESCRIPTION
+===================================================== */
 .hero p {
+    font-family:
+        "Cormorant Garamond",
+        "Noto Serif Sinhala",
+        serif;
+
     font-size: 22px;
+
     max-width: 800px;
+
     line-height: 1.7;
+
+    font-weight: 500;
 }
 
+
+/* =====================================================
+   HERO DATE
+===================================================== */
 .heroDate {
     margin-top: 25px;
+
     font-size: 26px;
+
     letter-spacing: 3px;
+
     color: #b8860b;
+
     font-weight: 600;
+
     text-transform: uppercase;
-    font-family: "Cinzel", "Noto Sans Sinhala", serif;
-    font-variant-numeric: lining-nums;
+
+    font-family:
+        "Playfair Display",
+        "Noto Serif Sinhala",
+        serif;
+
+    font-variant-numeric:
+        lining-nums;
 }
 
+
+/* =====================================================
+   HERO HEART
+===================================================== */
 .heroHeart {
     font-size: 45px;
+
     color: var(--gold-deep);
+
     margin: 10px 0 20px;
-    animation: heartBeat 2s infinite;
+
+    animation:
+        heartBeat
+        2s
+        infinite;
 }
 
+
+/* =====================================================
+   GOLD LINE
+===================================================== */
 .goldLine {
     width: 120px;
+
     height: 2px;
-    background: var(--gold-deep);
+
+    background:
+        var(--gold-deep);
+
     margin: 15px;
 }
 
@@ -287,157 +571,282 @@ body {
 .poruwaSection,
 .countdownSection {
     padding: 80px 8%;
+
     text-align: center;
-}
-
-.sectionTitle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.sectionTitle span {
-    color: var(--gold-deep);
-    font-size: 25px;
-}
-
-.sectionTitle h2 {
-    color: #9b7310;
-    font-size: 40px;
-}
-
-.centerText {
-    max-width: 750px;
-    margin: auto;
-    font-size: 21px;
-    line-height: 1.8;
 }
 
 
 /* =====================================================
-   COUNTDOWN  (light pink only)
+   SECTION TITLE
+===================================================== */
+.sectionTitle {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.sectionTitle span {
+    color:
+        var(--gold-deep);
+
+    font-size: 25px;
+}
+
+.sectionTitle h2 {
+    font-family:
+        "Playfair Display",
+        "Noto Serif Sinhala",
+        serif;
+
+    color: #9b7310;
+
+    font-size: 40px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   CENTER TEXT
+===================================================== */
+.centerText {
+    max-width: 750px;
+
+    margin: auto;
+
+    font-family:
+        "Cormorant Garamond",
+        "Noto Serif Sinhala",
+        serif;
+
+    font-size: 21px;
+
+    line-height: 1.8;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   COUNTDOWN
 ===================================================== */
 .countdownSection {
-    background: var(--pink);
-    color: var(--pink-dark);
+    background:
+        var(--pink);
+
+    color:
+        var(--pink-dark);
 }
 
 .countdownSection h2 {
+    font-family:
+        "Playfair Display",
+        "Noto Serif Sinhala",
+        serif;
+
     font-size: 40px;
-    color: var(--pink-dark);
+
+    color:
+        var(--pink-dark);
+
     margin-bottom: 35px;
 }
 
 .countdown {
     display: flex;
+
     justify-content: center;
+
     gap: 20px;
+
     flex-wrap: wrap;
 }
 
+
+/* =====================================================
+   CALENDAR BUTTON
+===================================================== */
 .calendarBtn {
     display: inline-block;
+
     margin-top: 40px;
 }
 
+
+/* =====================================================
+   TIME BOX
+===================================================== */
 .timeBox {
     width: 130px;
+
     padding: 20px;
-    border: 1px solid var(--pink-dark);
+
+    border:
+        2px solid
+        var(--gold-deep);
+
     border-radius: 15px;
-    background: rgba(255, 255, 255, .45);
+
+    background:
+        rgba(255, 255, 255, .45);
 }
 
 .timeBox span {
     display: block;
+
     font-size: 45px;
-    color: var(--pink-dark);
+
+    color:
+        var(--pink-dark);
 }
 
 .timeBox small {
     font-size: 18px;
-    color: var(--pink-dark);
+
+    color:
+        var(--pink-dark);
 }
 
 
 /* =====================================================
-   OUR STORY  (light pink)
+   OUR STORY
 ===================================================== */
 .section {
-    background: linear-gradient(180deg, var(--white), var(--pink));
+    background:
+        linear-gradient(
+            180deg,
+            var(--white),
+            var(--pink)
+        );
 }
 
 
 /* =====================================================
-   GALLERY  (light blue)
+   GALLERY
 ===================================================== */
 .gallerySection {
-    background: linear-gradient(180deg, var(--blue), var(--white) 50%, var(--blue));
+    background:
+        linear-gradient(
+            180deg,
+            var(--blue),
+            var(--white) 50%,
+            var(--blue)
+        );
 }
 
 .gallery {
     overflow: hidden;
+
     padding: 20px 0;
 }
 
 .galleryTrack {
     display: flex;
+
     gap: 20px;
+
     width: max-content;
-    animation: galleryScroll 40s linear infinite;
+
+    animation:
+        galleryScroll
+        40s
+        linear
+        infinite;
 }
 
 .gallery:hover .galleryTrack {
-    animation-play-state: paused;
+    animation-play-state:
+        paused;
 }
 
 .galleryTrack.isPaused {
-    animation-play-state: paused;
+    animation-play-state:
+        paused;
 }
 
 @keyframes galleryScroll {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    from {
+        transform:
+            translateX(0);
+    }
+
+    to {
+        transform:
+            translateX(-50%);
+    }
 }
 
 .gallery img {
     width: 300px;
+
     height: 400px;
+
     object-fit: cover;
+
     border-radius: 10px;
+
     flex-shrink: 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, .15);
+
     transition: .4s;
 }
 
 .gallery img:hover {
-    transform: scale(1.03);
+    transform:
+        scale(1.03);
 }
 
 
 /* =====================================================
-   PORUWA  (light pink -> white -> light blue)
+   PORUWA
 ===================================================== */
 .poruwaSection {
-    background: linear-gradient(135deg, var(--pink), var(--white) 50%, var(--blue));
+    background:
+        linear-gradient(
+            135deg,
+            var(--pink),
+            var(--white) 50%,
+            var(--blue)
+        );
 }
 
 .eventDetails {
     display: flex;
+
     justify-content: center;
+
     gap: 25px;
+
     flex-wrap: wrap;
+
     margin-top: 40px;
 }
 
 .eventDetails div {
     background: white;
+
     padding: 25px;
+
     min-width: 200px;
+
+    border:
+        2px solid
+        var(--gold-deep);
+
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, .08);
 }
 
 .eventDetails span {
@@ -445,108 +854,225 @@ body {
 }
 
 .eventDetails h3 {
-    color: #a37b14;
+    font-family:
+        "Playfair Display",
+        "Noto Serif Sinhala",
+        serif;
+
+    color:
+        var(--blue-dark);
+
     margin: 10px 0;
 }
 
 .eventDetails p {
+    font-family:
+        "Cormorant Garamond",
+        "Noto Serif Sinhala",
+        serif;
+
     font-size: 24px;
+
     font-weight: 600;
-    color: var(--navy);
-    font-variant-numeric: lining-nums;
+
+    color:
+        var(--blue-dark);
+
+    font-variant-numeric:
+        lining-nums;
+
     letter-spacing: .3px;
 }
 
 
 /* =====================================================
-   LOCATION  (light blue)
+   PORUWA TITLE + DESCRIPTION
+===================================================== */
+.poruwaSection .sectionTitle h2,
+.poruwaSection .centerText {
+    color:
+        var(--blue-dark);
+}
+
+
+/* =====================================================
+   LOCATION
 ===================================================== */
 .locationSection {
-    background: linear-gradient(180deg, var(--white), var(--blue));
+    background:
+        linear-gradient(
+            180deg,
+            var(--white),
+            var(--blue)
+        );
 }
 
 .hotelPhotoLink {
     display: block;
+
     max-width: 900px;
-    margin: 0 auto 30px;
+
+    margin:
+        0 auto 30px;
+
     border-radius: 15px;
+
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, .12);
+
     transition: .3s;
 }
 
 .hotelPhotoLink:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, .18);
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, .18);
 }
 
 .hotelPhoto {
     display: block;
+
     width: 100%;
+
     height: 380px;
+
     object-fit: cover;
 }
 
 .mapContainer {
     max-width: 900px;
+
     margin: 30px auto;
+
     border-radius: 15px;
+
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, .12);
 }
 
 .mapContainer iframe {
     width: 100%;
+
     height: 400px;
+
     border: 0;
 }
 
 
 /* =====================================================
-   RSVP  (light blue -> white -> light pink)
+   RSVP
 ===================================================== */
 .rsvpSection {
-    background: linear-gradient(180deg, var(--blue), var(--white) 50%, var(--pink));
+    background:
+        linear-gradient(
+            180deg,
+            var(--blue),
+            var(--white) 50%,
+            var(--pink)
+        );
 }
 
+
+/* =====================================================
+   GOLD BUTTON
+===================================================== */
 .goldButton {
-    background: var(--gold-deep);
+    background:
+        var(--gold-deep);
+
     color: white;
+
     border: 0;
-    padding: 15px 40px;
+
+    padding:
+        15px 40px;
+
     border-radius: 50px;
+
     font-size: 18px;
-    font-family: "Cormorant Garamond", "Noto Sans Sinhala", serif;
+
+    font-family:
+        "Cormorant Garamond",
+        "Noto Serif Sinhala",
+        serif;
+
     cursor: pointer;
+
     transition: .3s;
 }
 
 .goldButton:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, .15);
 }
 
+
+/* =====================================================
+   CONTACT NUMBERS
+===================================================== */
 .contactNumbers {
     display: flex;
+
     justify-content: center;
+
     gap: 20px;
+
     flex-wrap: wrap;
+
     margin-top: 35px;
 }
 
 .contactItem {
     display: inline-flex;
+
     align-items: center;
+
     gap: 12px;
-    padding: 14px 30px;
-    border: 1px solid var(--gold-deep);
+
+    padding:
+        14px 30px;
+
+    border:
+        1px solid
+        var(--gold-deep);
+
     border-radius: 50px;
-    background: var(--navy);
-    color: var(--cream);
+
+    background:
+        var(--navy);
+
+    color:
+        var(--cream);
+
+    font-family:
+        "Cormorant Garamond",
+        "Noto Serif Sinhala",
+        serif;
+
     font-size: 20px;
-    font-variant-numeric: lining-nums;
+
+    font-variant-numeric:
+        lining-nums;
+
     text-decoration: none;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, .12);
+
+    box-shadow:
+        0 6px 16px
+        rgba(0, 0, 0, .12);
+
     transition: .3s;
 }
 
@@ -555,9 +1081,14 @@ body {
 }
 
 .contactItem:hover {
-    background: var(--gold-deep);
-    color: var(--navy);
-    transform: translateY(-3px);
+    background:
+        var(--gold-deep);
+
+    color:
+        var(--navy);
+
+    transform:
+        translateY(-3px);
 }
 
 
@@ -566,37 +1097,70 @@ body {
 ===================================================== */
 #musicButton {
     position: fixed;
+
     right: 20px;
+
     bottom: 20px;
+
     width: 55px;
+
     height: 55px;
+
     border-radius: 50%;
-    border: 2px solid var(--gold-deep);
-    background: var(--navy);
-    color: var(--cream);
+
+    border:
+        2px solid
+        var(--gold-deep);
+
+    background:
+        var(--navy);
+
+    color:
+        var(--cream);
+
     z-index: 1000;
+
     cursor: pointer;
+
     font-size: 20px;
 }
 
 
 /* =====================================================
-   FOOTER  (white -> gold, navy text)
+   FOOTER
 ===================================================== */
 footer {
     padding: 60px 20px;
+
     text-align: center;
-    background: linear-gradient(135deg, var(--white), var(--gold));
-    color: var(--navy);
+
+    background:
+        var(--blue);
+
+    color:
+        var(--blue-dark);
 }
 
 footer h2 {
-    color: var(--navy);
+    font-family:
+        "Playfair Display",
+        "Noto Serif Sinhala",
+        serif;
+
+    color:
+        var(--blue-dark);
+
     font-size: 40px;
+
     margin-bottom: 15px;
 }
 
 footer p {
+    font-family:
+        "Cormorant Garamond",
+        "Noto Serif Sinhala",
+        serif;
+
     font-size: 18px;
 }
 
@@ -606,28 +1170,60 @@ footer p {
 ===================================================== */
 .backButton {
     position: fixed;
+
     top: 20px;
+
     left: 20px;
+
     z-index: 2000;
-    padding: 12px 24px;
-    border: 1px solid var(--gold-deep);
+
+    padding:
+        12px 24px;
+
+    border:
+        1px solid
+        var(--gold-deep);
+
     border-radius: 50px;
-    background: rgba(20, 35, 59, 0.92);
-    color: var(--cream);
-    font-family: "Cormorant Garamond", serif;
+
+    background:
+        rgba(20, 35, 59, 0.92);
+
+    color:
+        var(--cream);
+
+    font-family:
+        "Cormorant Garamond",
+        "Noto Serif Sinhala",
+        serif;
+
     font-size: 18px;
+
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+    transition:
+        all .3s ease;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.15);
 }
 
 .backButton:hover {
-    background: var(--gold-deep);
-    color: #ffffff;
-    transform: translateY(-3px);
+    background:
+        var(--gold-deep);
+
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-3px);
 }
 
-/* Hidden until the main content is visible */
+
+/* =====================================================
+   HIDDEN UNTIL MAIN CONTENT IS VISIBLE
+===================================================== */
 #backToSplash {
     display: none;
 }
@@ -644,28 +1240,40 @@ footer p {
 
     .smallText {
         font-size: 15px;
+
         letter-spacing: 2px;
     }
 
     .contactNumbers {
         flex-direction: column;
+
         align-items: center;
     }
 
     .contactItem {
         width: 100%;
+
         max-width: 320px;
+
         justify-content: center;
+
         font-size: 18px;
     }
 
     .heroDate {
         font-size: 18px;
+
         letter-spacing: 2px;
     }
 
+    /* Couple names */
     .coupleNames {
-        font-size: clamp(45px, 15vw, 75px);
+        font-family:
+            "Great Vibes",
+            cursive;
+
+        font-size:
+            clamp(48px, 15vw, 80px);
     }
 
     .invitationText {
@@ -673,7 +1281,9 @@ footer p {
     }
 
     .languageBtn {
-        padding: 12px 28px;
+        padding:
+            12px 28px;
+
         font-size: 17px;
     }
 
@@ -683,7 +1293,8 @@ footer p {
     .rsvpSection,
     .poruwaSection,
     .countdownSection {
-        padding: 55px 20px;
+        padding:
+            55px 20px;
     }
 
     .sectionTitle {
@@ -696,7 +1307,9 @@ footer p {
 
     .timeBox {
         width: 90px;
-        padding: 15px 8px;
+
+        padding:
+            15px 8px;
     }
 
     .timeBox span {
@@ -709,6 +1322,7 @@ footer p {
 
     .gallery img {
         width: 240px;
+
         height: 320px;
     }
 
@@ -726,8 +1340,12 @@ footer p {
 
     .backButton {
         top: 12px;
+
         left: 12px;
-        padding: 9px 18px;
+
+        padding:
+            9px 18px;
+
         font-size: 16px;
     }
 }
