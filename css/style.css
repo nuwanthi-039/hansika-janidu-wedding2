@@ -258,6 +258,8 @@ body {
     color: #b8860b;
     font-weight: 600;
     text-transform: uppercase;
+    font-family: "Cinzel", "Noto Sans Sinhala", serif;
+    font-variant-numeric: lining-nums;
 }
 
 .heroHeart {
