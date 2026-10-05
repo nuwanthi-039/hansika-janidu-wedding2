@@ -10,7 +10,6 @@
     --navy:      #14233b;
     --cream:     #f5f0e6;
     --purple:    #b48be0;
-    --pink-deep: #f7bfd2;
     --white:     #ffffff;
 }
 
@@ -315,10 +314,10 @@ body {
 
 
 /* =====================================================
-   COUNTDOWN  (light pink -> white -> pink)
+   COUNTDOWN  (light pink only)
 ===================================================== */
 .countdownSection {
-    background: linear-gradient(135deg, var(--pink), var(--white) 50%, var(--pink-deep));
+    background: var(--pink);
     color: var(--navy);
 }
 
